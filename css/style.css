@@ -14,14 +14,16 @@ body {
     width: 100%;
     height: 100vh;
 }
+
+/* Media queries default */
+nav .nav-wrapper-xs {
+    display: none;
+}
 /* END COMMON */
 
 /* MAIN */
 main {
     height: calc( 100% - 80px);
-
-    /* TEST */
-    background-color: darkkhaki;
 
 }
 
@@ -31,15 +33,14 @@ nav {
     height: 100%;
     width: 240px;
     overflow: hidden;
-
-     /* TEST */
      background-color: black;
 }
 
 /* Logo */
-nav {
+.nav-wrapper-lg {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 nav .logo {
@@ -269,6 +270,85 @@ footer {
 }
 
 /* FINE FIXED ELEMENT */
+
+
+/* MEDIA QUERIES */
+
+/* SMARTPHONE */
+@media all and (max-width: 480px) {
+    
+    /* Main Nav */
+    nav {
+        width: 70px;
+    }
+
+    nav .nav-wrapper-lg {
+        display: none;
+    }
+
+    nav .nav-wrapper-xs {
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        
+    }
+
+    nav .nav-wrapper-xs > * {
+        width: 30px;
+    }
+
+    nav .nav-wrapper-xs img {
+        width: 100%;        
+    }
+
+    .nav-icon-list-xs {
+        flex-grow: 1;
+    }
+
+    .nav-icon-list-xs li {
+        padding-top: 10px;
+    }
+
+    .nav-icon-list-xs li img {
+        opacity: 0.7;
+    }
+    .nav-icon-list-xs li a:hover img {
+        opacity: 1;
+    }
+
+    .profile-container-xs .install{
+        width: 18px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    .profile-container-xs .install img {
+        opacity: 0.7;
+    }
+    .profile-container-xs .install a:hover img {
+        opacity: 1;
+    }
+
+    .profile-container-xs .profile-img {
+        width: 25px;
+        height: 25px;
+        margin: auto;
+        overflow: hidden;
+        background-color: #808080;
+        border-radius: 50%;
+    }
+    /* Main Content */
+    .main-content {
+        width: calc( 100% - 70px );
+    }
+
+    /* Element Fixed */
+    .fixed-element {
+        width: calc( 100% - 70px );
+    }
+
+}
 
 
 
