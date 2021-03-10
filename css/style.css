@@ -4,3 +4,54 @@
     box-sizing: border-box;
 }
 
+/* COMMON */
+.app-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+/* END COMMON */
+
+/* MAIN */
+main {
+    height: calc( 100% - 80px);
+
+    /* TEST */
+    background-color: darkkhaki;
+}
+
+/* Main Nav */
+nav {
+    float: left;
+    height: 100%;
+    width: 200px;
+    overflow: hidden;
+
+     /* TEST */
+     background-color: coral;
+}
+
+/* Main Content  */
+.main-content {
+    float: left;
+    height: 100%;
+    width: calc( 100% - 200px );
+    overflow-y: auto;
+
+     /* TEST */
+     background-color: blue;
+}
+
+/* FINE MAIN */
+
+
+/* FOOTER */
+footer {
+    height: 80px;
+    overflow: hidden;
+
+    /* TEST */
+    background-color: aquamarine;
+}
+
+
+
