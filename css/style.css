@@ -19,6 +19,24 @@ body {
 nav .nav-wrapper-xs {
     display: none;
 }
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
 /* END COMMON */
 
 /* MAIN */
@@ -251,7 +269,7 @@ footer {
     width: calc( 100% - 240px);
     background-color: rgba( 0, 0, 0, 0.5);
     text-align: right;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 0;
 }
 
 .fixed-element .button {
@@ -259,7 +277,7 @@ footer {
     color:white;
     text-transform: uppercase;
     font-size: 12px;
-    padding: 10px 40px;
+    padding: 10px 30px;
     border: 1px solid white;
     border-radius: 20px;
     display: inline-block;
@@ -275,7 +293,7 @@ footer {
 /* MEDIA QUERIES */
 
 /* SMARTPHONE */
-@media all and (max-width: 480px) {
+@media all and (max-width: 468px) {
     
     /* Main Nav */
     nav {
