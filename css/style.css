@@ -343,6 +343,7 @@ footer {
 
 .player-buttons {
     width: 65%;
+    min-width: 230px;
     margin: auto;
     height: 50%;
     color: white;
@@ -361,6 +362,9 @@ footer {
 .player-buttons a.play {
     font-size: 32px;
 }
+.player-buttons a.play:hover {
+    transform: scale(1.1);
+}
 
 .player-bar {
     width: 100%;
@@ -375,13 +379,42 @@ footer {
 }
 
 .player-bar .bar {
-    width: 80%;
+    width: 78%;
     margin: auto;
+    height: 4px;
+    background-color: #595959;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.player-bar .bar > .progressive-bar {
+    width: 25%;
+    height: 100%;
+    background-color: #b3b3b3;
+    border-radius: 4px;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+}
+.player-bar .bar > .progressive-bar::after {
+    content:'';
+    height: 12px;
+    width: 12px;
+    background-color: #b3b3b3;
+    border-radius: 50%;
+    display: none;
+    position:absolute;
+    right:0;
+    top:0;
+    transform: translate(50%, -38%);    
+}
+.player-bar .bar:hover .progressive-bar::after{
     display: inline-block;
-    height: 3px;
-    background-color: #fff;
-    border: 3px solid white;
-    border-radius: 10px;
+}
+.player-bar .bar:hover .progressive-bar {
+    background-color: #adff2f;
 }
 
 
