@@ -42,6 +42,44 @@ nav .nav-wrapper-xs {
     height: 100%;
     display: flex;
 }
+
+.bar {
+    height: 4px;
+    background-color: #595959;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bar > .progressive-bar {
+    height: 100%;
+    background-color: #efefef;
+    border-radius: 4px;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+}
+
+.progressive-bar::after {
+    content:'';
+    height: 12px;
+    width: 12px;
+    background-color: #e0dcdc;
+    border-radius: 50%;
+    display: none;
+    position:absolute;
+    right:0;
+    top:0;
+    transform: translate(50%, -38%);    
+}
+.bar:hover .progressive-bar::after{
+    display: inline-block;
+}
+.bar:hover .progressive-bar {
+    background-color: #adff2f;
+}
+
 /* END COMMON */
 
 /* MAIN */
@@ -259,9 +297,7 @@ nav .nav-icon-list img {
 footer {
     height: 80px;
     overflow: hidden;
-
-    /* TEST */
-    background-color: aquamarine;
+    background-color: #282828;
 }
 
 .footer-wrapper{
@@ -274,16 +310,16 @@ footer {
 /* Now Playing */
 .now-playing {
     height: 100%;
+    padding: 0 10px;
 
     /* TEST */
-    background-color:darkred;
     width: 240px;
-    flex-shrink:0;
+    /* flex-shrink:0; */
   
 }
 
 .now-playing > .flex-container {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -320,10 +356,10 @@ footer {
     color:white;
 }
 
-
 .now-playing .brano-icons a  {
     color: #717171;
     margin-left: 10px;
+    font-size: 16px;
 }
 .now-playing .brano-icons a:hover {
     color:white;
@@ -333,17 +369,12 @@ footer {
 /* Player */
 .player {
     height: 100%;
-    padding: 10px 0;
-
-    /* TEST */
-    background-color:darkred;
-    width: 400px;
-    border: 1px solid red;
+    padding: 15px 10px 5px;
+    width: 40%;
 }
 
 .player-buttons {
-    width: 65%;
-    min-width: 230px;
+    max-width: 250px;
     margin: auto;
     height: 50%;
     color: white;
@@ -360,7 +391,7 @@ footer {
     font-weight: 500;
 }
 .player-buttons a.play {
-    font-size: 32px;
+    font-size: 30px;
 }
 .player-buttons a.play:hover {
     transform: scale(1.1);
@@ -380,54 +411,45 @@ footer {
 
 .player-bar .bar {
     width: 78%;
-    margin: auto;
-    height: 4px;
-    background-color: #595959;
-    border-radius: 4px;
-    position: relative;
-    cursor: pointer;
+    margin: 10px 20px;
 }
 
 .player-bar .bar > .progressive-bar {
-    width: 25%;
-    height: 100%;
-    background-color: #b3b3b3;
-    border-radius: 4px;
-    position:absolute;
-    top:0;
-    left:0;
-    cursor:pointer;
+    width: 25%;   
 }
-.player-bar .bar > .progressive-bar::after {
-    content:'';
-    height: 12px;
-    width: 12px;
-    background-color: #b3b3b3;
-    border-radius: 50%;
-    display: none;
-    position:absolute;
-    right:0;
-    top:0;
-    transform: translate(50%, -38%);    
-}
-.player-bar .bar:hover .progressive-bar::after{
-    display: inline-block;
-}
-.player-bar .bar:hover .progressive-bar {
-    background-color: #adff2f;
-}
+
 
 
 /* Settings */
 .settings {
     height: 100%;
+    padding-right: 10px;
 
     /* TEST */
-    background-color: #fff;
     width: 240px;
-    flex-shrink:0;
+    /* flex-shrink:0; */
 }
 
+.settings > .flex-container {
+    align-items: center;
+}
+
+.settings a {
+    color: #efefef;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.settings a:hover {
+    color:white;
+}
+
+.settings .bar {
+    width: 50%;
+    margin:auto;
+}
+.settings .bar > .progressive-bar {
+    width: 25%;
+}
 
 /* FINE FOOTER */
 
@@ -462,6 +484,21 @@ footer {
 
 
 /* MEDIA QUERIES */
+
+/* TABLET */
+@media all and (max-width: 768px) {
+    .player-buttons a.play {
+        font-size: 24px;
+    }
+    .player-buttons a {
+        font-size: 12px;
+    }
+
+    .settings a {
+        font-size:12px;
+        margin: 5px;
+    }
+}
 
 /* SMARTPHONE */
 @media all and (max-width: 468px) {
@@ -532,12 +569,26 @@ footer {
         width: calc( 100% - 70px );
     }
 
+    /* Footer */
+    .now-playing {
+        padding-right:0;
+    }
+    .now-playing .brano-icons a {
+        margin-left:0;
+    }
+    
+    .player {
+        width: 60%;
+    }
+
     /* Element Fixed */
     .fixed-element {
         width: calc( 100% - 70px );
     }
 
 }
+
+
 
 
 
