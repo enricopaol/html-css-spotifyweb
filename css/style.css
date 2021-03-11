@@ -71,7 +71,7 @@ nav .nav-wrapper-xs {
     position:absolute;
     right:0;
     top:0;
-    transform: translate(50%, -38%);    
+    transform: translate(50%, -35%);    
 }
 .bar:hover .progressive-bar::after{
     display: inline-block;
@@ -287,7 +287,8 @@ nav .nav-icon-list img {
     padding-top: 79px;
 
      /* TEST */
-     background-color: blue;
+     background-color: #141922;
+     color: white;
 }
 
 /* FINE MAIN */
@@ -432,6 +433,7 @@ footer {
 
 .settings > .flex-container {
     align-items: center;
+    justify-content: flex-end;
 }
 
 .settings a {
@@ -445,7 +447,7 @@ footer {
 
 .settings .bar {
     width: 50%;
-    margin:auto;
+    margin: 5px;
 }
 .settings .bar > .progressive-bar {
     width: 25%;
