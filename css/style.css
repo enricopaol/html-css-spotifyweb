@@ -258,6 +258,82 @@ footer {
     /* TEST */
     background-color: aquamarine;
 }
+
+.footer-wrapper{
+    display:flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.flex-container {
+    height: 100%;
+    display: flex;
+}
+
+/* Now Playing */
+.now-playing {
+    height: 100%;
+
+    /* TEST */
+    background-color: #fff;
+    width: 240px;
+    flex-shrink:0;
+  
+}
+
+.now-playing > .flex-container {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.now-playing .brano {
+    display: flex;
+    align-items: center;
+}
+.now-playing .brano .brano-img {
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+}
+
+.brano .brano-img img {
+    width: 100%;
+    height: auto;
+}
+
+.brano .brano-title {
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.brano .brano-title span:last-child {
+    font-size: 10px;
+    display: block;
+}
+
+
+/* Player */
+.player {
+    height: 100%;
+
+    /* TEST */
+    background-color: #fff;
+    width: 400px;
+    border: 1px solid red;
+}
+
+
+/* Settings */
+.settings {
+    height: 100%;
+
+    /* TEST */
+    background-color: #fff;
+    width: 240px;
+    flex-shrink:0;
+}
+
+
 /* FINE FOOTER */
 
 /* FIXED ELEMENT */
