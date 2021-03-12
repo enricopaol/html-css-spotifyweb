@@ -97,6 +97,7 @@ body {
     margin-bottom: 14px;
     position: relative;
     height: auto;
+    cursor: pointer;
 }
 .song-box .record-container img {
     width: 100%;
@@ -387,6 +388,35 @@ main {
 .recently-played > .flex-container {
     padding-top: 30px;
     flex-wrap: wrap;
+}
+
+/* Created For */
+.created-for {
+    padding-bottom: 10px;
+}
+.created-for h5 {
+    margin-top: 10px;
+}
+.created-for > .flex-container {
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Popular Artists */
+.popular-artists {
+    padding-bottom: 10px;
+}
+.popular-artists h5 {
+    margin-top: 10px;
+}
+
+.popular-artists > .flex-container {
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.popular-artists .song-box .record-container img {
+    border-radius: 50%;
 }
 
 
