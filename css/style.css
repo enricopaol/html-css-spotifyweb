@@ -8,6 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    min-width: 300px;
     }
 
 .app-wrapper {
@@ -285,10 +286,8 @@ nav .nav-icon-list img {
     width: calc( 100% - 240px );
     overflow-y: auto;
     padding-top: 79px;
-
-     /* TEST */
-     background-color: #141922;
-     color: white;
+    background-color: #141922;
+    color: white;
 }
 
 /* FINE MAIN */
@@ -312,11 +311,7 @@ footer {
 .now-playing {
     height: 100%;
     padding: 0 10px;
-
-    /* TEST */
-    width: 240px;
-    /* flex-shrink:0; */
-  
+    width: 240px; 
 }
 
 .now-playing > .flex-container {
@@ -425,10 +420,7 @@ footer {
 .settings {
     height: 100%;
     padding-right: 10px;
-
-    /* TEST */
     width: 240px;
-    /* flex-shrink:0; */
 }
 
 .settings > .flex-container {
@@ -488,7 +480,7 @@ footer {
 /* MEDIA QUERIES */
 
 /* TABLET */
-@media all and (max-width: 768px) {
+@media all and (max-width: 991px) {
     .player-buttons a.play {
         font-size: 24px;
     }
@@ -507,7 +499,7 @@ footer {
 }
 
 /* SMARTPHONE */
-@media all and (max-width: 468px) {
+@media all and (max-width: 767px) {
     
     /* Main Nav */
     nav {
