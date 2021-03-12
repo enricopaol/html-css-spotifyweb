@@ -381,47 +381,31 @@ main {
 
 }
 
-/* Recently Played */
-.recently-played {
-    padding: 30px 0 10px;
-}
-.recently-played > .flex-container {
+/* Per tutte le sezioni del main content */
+.main-section > .flex-container {
     padding-top: 30px;
     flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+/* Recently Played */
+.recently-played {
+    padding-top: 30px;
 }
 
 /* Created For */
-.created-for {
-    padding-bottom: 10px;
-}
 .created-for h5 {
     margin-top: 10px;
 }
-.created-for > .flex-container {
-    padding-top: 30px;
-    flex-wrap: wrap;
-}
 
 /* Popular Artists */
-.popular-artists {
-    padding-bottom: 10px;
-}
 .popular-artists h5 {
     margin-top: 10px;
-}
-
-.popular-artists > .flex-container {
-    padding-top: 30px;
-    flex-wrap: wrap;
 }
 
 .popular-artists .song-box .record-container img {
     border-radius: 50%;
 }
-
-
-
-
 /* FINE MAIN */
 
 
